@@ -5,9 +5,13 @@ public abstract class BookReader {
     abstract void startReading();
     abstract void stopReading();
 
+    public boolean isInteractive(){return false;}
+
     public final void readBook() {
         initialize();
         startReading();
-        stopReading();
+        if(!this.isInteractive()) {
+            stopReading();
+        }
     }
 }

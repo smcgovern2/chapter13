@@ -3,16 +3,18 @@ package ch13.work.command;
 public class Main {
 
     public static void main(String[] args) {
-        Stock abcStock = new Stock();
 
-        BuyStock buyStockOrder = new BuyStock(abcStock);
-        SellStock sellStockOrder = new SellStock(abcStock);
 
-        Broker broker = new Broker();
-        broker.takeOrder(buyStockOrder);
-        broker.takeOrder(sellStockOrder);
 
-        broker.placeOrders();
+
+        BuyCommodity buyCorn = new BuyCommodity(CommodityType.WHEAT, 400);
+        SellCommodity sellWheat = new SellCommodity(CommodityType.WHEAT, 200);
+
+        Trader trader = new Trader();
+        trader.takeOrder(buyCorn);
+        trader.takeOrder(sellWheat);
+
+        trader.placeOrders();
     }
 
 }

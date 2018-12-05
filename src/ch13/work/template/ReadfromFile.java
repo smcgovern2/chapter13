@@ -7,10 +7,8 @@ public class ReadfromFile extends BookReader{
 
     @Override
     void initialize() {
-        URL url = getClass().getResource("prideprejudice.txt");
-        input = new FileInput(url.getPath());
 
-
+        input = new FileInput("prideprejudice.txt");
     }
 
     @Override
